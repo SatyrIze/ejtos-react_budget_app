@@ -7,6 +7,21 @@ import Budget from './components/Budget';
 
 // Add code to import the other components here under
 
+//Code to import Remaining.js
+import Remaining from './components/Remaining';
+
+//Code to import ExpenseList.js
+import ExpenseList from './components/ExpenseList';
+
+//Code to import ExpenseItem.js
+import ExpenseItem from './components/ExpenseItem';
+
+//Code to import AllocationForm.js
+import AllocationForm from './components/AllocationForm';
+
+//Code to import ExpenseTotal.js
+import ExpenseTotal from './components/ExpenseTotal';
+
 
 import { AppProvider } from './context/AppContext';
 const App = () => {
@@ -16,27 +31,53 @@ const App = () => {
                 <h1 className='mt-3'>Company's Budget Allocation</h1>
                     <div className='row mt-3'>
                         {
-                            /* Add Budget component here */
+                            // Budget component
+                            <div className='col-sm'>
+                            <Budget />
+                            </div>                        
                         }        
 
                         {
-                            /* Add Remaining component here*/
+                            //Remaining component
+                            <div className='col-sm'>
+                            <Remaining />
+                            </div>
                         }        
 
                         {
-                            /* Add ExpenseTotal component here */
+                            //ExpenseTotal component
+                            <div className='col-sm'>
+                            <ExpenseTotal />
+                            </div>
                         }        
                        
                         {
-                            /* Add ExpenseList component here */
+                            //ExpenseList component
+                            <React.Fragment>
+                            <h3 className='mt-3'>Allocation</h3>
+                            <div className='row '>
+                                <div className='col-sm'>
+                                    <ExpenseList />
+                                </div>
+                            </div>
+                            </React.Fragment>
                         }         
 
                         {
-                            /* Add ExpenseItem component here */
+                            //ExpenseItem component
+
                         }        
 
                         {
-                            /* Add AllocationForm component here under */
+                            //AllocationForm component
+                            <React.Fragment>
+                            <h3 className='mt-3'>Allocation Form</h3>
+                            <div className='row mt-3'>
+                                <div className='col-sm'>
+                                <AllocationForm />
+                                </div>
+                            </div>
+                            </React.Fragment>
                         }        
 
                 </div>
