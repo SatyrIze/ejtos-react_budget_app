@@ -4,13 +4,22 @@ const Budget = () => {
     const { budget } = useContext(AppContext);
     const [newBudget, setNewBudget] = useState(budget);
     const handleBudgetChange = (event) => {
-        setNewBudget(event.target.value);
+        const inputValue = event.target.value;
+        if (isNaN(inputValue)) {
+            alert('Please enter a valid number.')
+        }
+        else {
+            setNewBudget(inputValue);
+        }
     }
     return (
 <div className='alert alert-secondary'>
-<span>Budget: £{budget}</span>
-<input type="number" step="10" value={newBudget} onChange={handleBudgetChange}></input>
+<span>Budget: £</span>
+<input id='budgetId' type="number" step="10" value={newBudget} onChange={handleBudgetChange}></input>
 </div>
     );
 };
+
+
+
 export default Budget;
