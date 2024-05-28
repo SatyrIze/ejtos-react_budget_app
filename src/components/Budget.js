@@ -12,7 +12,7 @@ const Budget = () => {
         }, 0);
 
         if (newBudget > 20000) {
-            alert("The budget cannot exceed funds  £ 20,000");
+            alert("The budget cannot exceed funds" + " " + currency + "20,000");
             return;
         }
 
